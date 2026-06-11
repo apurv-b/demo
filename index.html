@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Note Perfect Karaoke Events</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:gold;
+border-radius:20px;
+}
+
+/* Navbar */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h2{
+color:gold;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:gold;
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:65px;
+color:gold;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+}
+
+.btn{
+padding:15px 35px;
+border:none;
+background:gold;
+color:black;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+border-radius:50px;
+transition:.3s;
+text-decoration:none;
+display:inline-block;
+margin:10px;
+}
+
+.btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px gold;
+}
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+color:gold;
+margin-bottom:50px;
+}
+
+/* About */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.glass{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
+}
+
+/* Services */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+padding:30px;
+text-align:center;
+border-radius:20px;
+background:#111;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px gold;
+}
+
+.card h3{
+margin-bottom:15px;
+color:gold;
+}
+
+/* Gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* Reviews */
+
+.review-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.review{
+background:#111;
+padding:25px;
+border-radius:15px;
+}
+
+.stars{
+color:gold;
+font-size:22px;
+margin-bottom:10px;
+}
+
+/* Contact */
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+outline:none;
+background:#111;
+color:white;
+border-radius:10px;
+}
+
+textarea{
+height:150px;
+resize:none;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:40px;
+background:#000;
+margin-top:50px;
+}
+
+/* Floating Buttons */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+z-index:999;
+box-shadow:0 0 20px #25d366;
+}
+
+.call{
+position:fixed;
+bottom:95px;
+right:20px;
+background:gold;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+text-decoration:none;
+color:black;
+z-index:999;
+box-shadow:0 0 20px gold;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:42px;
+}
+
+.about,
+.contact{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>🎤 Note Perfect</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h1>NOTE PERFECT<br>KARAOKE EVENTS</h1>
+
+<p>Make Every Event Unforgettable</p>
+
+<a href="#contact" class="btn">Enquire Now</a>
+
+<a href="tel:+919922260603" class="btn">Call Now</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="title">About Us</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800">
+
+<div class="glass">
+
+<h2 style="color:gold;">Your Celebration, Our Music</h2>
+
+<br>
+
+<p>
+
+We provide premium live singing, karaoke entertainment and professional singer services for birthdays, weddings, corporate events and private parties.
+
+With our energetic performances and quality sound setup, we make every event memorable.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>🎤 Live Singing</h3>
+<p>Professional singers for all occasions.</p>
+</div>
+
+<div class="card">
+<h3>🎵 Karaoke Nights</h3>
+<p>Interactive karaoke entertainment.</p>
+</div>
+
+<div class="card">
+<h3>💍 Wedding Events</h3>
+<p>Elegant musical performances.</p>
+</div>
+
+<div class="card">
+<h3>🎂 Birthday Parties</h3>
+<p>Fun-filled musical celebrations.</p>
+</div>
+
+<div class="card">
+<h3>🏢 Corporate Events</h3>
+<p>Premium entertainment solutions.</p>
+</div>
+
+<div class="card">
+<h3>🎊 Private Functions</h3>
+<p>Customized music experiences.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="title">Event Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=700">
+
+<img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=700">
+
+<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=700">
+
+<img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=700">
+
+<img src="https://images.unsplash.com/photo-1503095396549-807759245b35?w=700">
+
+<img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=700">
+
+</div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section>
+
+<h2 class="title">What Clients Say</h2>
+
+<div class="review-box">
+
+<div class="review">
+<div class="stars">★★★★★</div>
+Excellent karaoke experience. Everyone loved the performance.
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+Professional singer and amazing sound quality.
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+Highly recommended for weddings and parties.
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="title">Enquire Now</h2>
+
+<div class="contact">
+
+<div class="glass">
+
+<h3 style="color:gold;">Contact Information</h3>
+
+<br>
+
+<p><b>📞 Phone:</b> +91 99222 60603</p>
+
+<br>
+
+<p><b>📍 Address:</b></p>
+
+<p>
+Gharkul, Sai Sharan,
+B24/105 HSG Society,
+Sector 19, Chikhali,
+Pimpri-Chinchwad,
+Maharashtra 411062
+</p>
+
+<br>
+
+<iframe
+src="https://maps.google.com/maps?q=Chikhali%20Pimpri%20Chinchwad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="250"
+style="border:0;border-radius:15px;">
+</iframe>
+
+</div>
+
+<div class="glass">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="tel" placeholder="Phone Number">
+
+<input type="text" placeholder="Event Type">
+
+<textarea placeholder="Tell us about your event"></textarea>
+
+<button class="btn" style="width:100%;">
+SEND ENQUIRY
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 style="color:gold;">NOTE PERFECT KARAOKE EVENTS</h2>
+
+<br>
+
+<p>🎤 Live Singing | Karaoke Entertainment | Professional Singer</p>
+
+<br>
+
+<p>📞 +91 99222 60603</p>
+
+<br>
+
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+<a href="https://wa.me/919922260603" class="whatsapp">
+💬
+</a>
+
+<a href="tel:+919922260603" class="call">
+📞
+</a>
+
+<script>
+
+// Fade Animation
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.animate([
+{opacity:0,transform:'translateY(50px)'},
+{opacity:1,transform:'translateY(0px)'}
+],{
+duration:1000,
+fill:'forwards'
+});
+}
+});
+});
+
+document.querySelectorAll("section,.card,.review").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
