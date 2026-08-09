@@ -566,7 +566,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.82);padding:80px 5vw 3
       <div class="placeholder">
         <i class="fa-solid fa-image"></i>
         <span class="ph-label">Hero banner</span>
-        <span class="ph-name">images/hero/hero-banner.jpg</span>
+        <span class="ph-name">hero-banner.jpg</span>
       </div>
       <div class="float-card">
         <i class="fa-solid fa-gift"></i>
@@ -649,7 +649,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.82);padding:80px 5vw 3
             <!-- Birthday -->
             <button class="quiz-option has-img" type="button">
               <span class="thumb-wrap">
-                <img class="media-fill" src="images/quiz/birthday.jpg" alt="Birthday gift" loading="lazy" onerror="handleMediaError(this,'Birthday','images/quiz/birthday.jpg')">
+                <img class="media-fill" src="occasion-birthday.jpg" alt="Birthday gift" loading="lazy" onerror="handleMediaError(this,'Birthday','occasion-birthday.jpg')">
               </span>
               <span class="option-label"><i class="fa-solid fa-cake-candles"></i> Birthday</span>
             </button>
@@ -657,7 +657,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.82);padding:80px 5vw 3
             <!-- Anniversary -->
             <button class="quiz-option has-img" type="button">
               <span class="thumb-wrap">
-                <img class="media-fill" src="images/quiz/anniversary.jpg" alt="Anniversary gift" loading="lazy" onerror="handleMediaError(this,'Anniversary','images/quiz/anniversary.jpg')">
+                <img class="media-fill" src="occasion-anniversary.jpg" alt="Anniversary gift" loading="lazy" onerror="handleMediaError(this,'Anniversary','occasion-anniversary.jpg')">
               </span>
               <span class="option-label"><i class="fa-solid fa-heart"></i> Anniversary</span>
             </button>
@@ -665,7 +665,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.82);padding:80px 5vw 3
             <!-- Wedding -->
             <button class="quiz-option has-img" type="button">
               <span class="thumb-wrap">
-                <img class="media-fill" src="images/quiz/wedding.jpg" alt="Wedding gift" loading="lazy" onerror="handleMediaError(this,'Wedding','images/quiz/wedding.jpg')">
+                <img class="media-fill" src="occasion-wedding.jpg" alt="Wedding gift" loading="lazy" onerror="handleMediaError(this,'Wedding','occasion-wedding.jpg')">
               </span>
               <span class="option-label"><i class="fa-solid fa-rings-wedding"></i> Wedding</span>
             </button>
@@ -673,7 +673,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.82);padding:80px 5vw 3
             <!-- Baby Shower -->
             <button class="quiz-option has-img" type="button">
               <span class="thumb-wrap">
-                <img class="media-fill" src="images/quiz/baby-shower.jpg" alt="Baby shower gift" loading="lazy" onerror="handleMediaError(this,'Baby Shower','images/quiz/baby-shower.jpg')">
+                <img class="media-fill" src="occasion-baby-shower.jpg" alt="Baby shower gift" loading="lazy" onerror="handleMediaError(this,'Baby Shower','occasion-baby-shower.jpg')">
               </span>
               <span class="option-label"><i class="fa-solid fa-baby"></i> Baby Shower</span>
             </button>
@@ -681,7 +681,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.82);padding:80px 5vw 3
             <!-- Corporate -->
             <button class="quiz-option has-img" type="button">
               <span class="thumb-wrap">
-                <img class="media-fill" src="images/quiz/corporate.jpg" alt="Corporate gift" loading="lazy" onerror="handleMediaError(this,'Corporate','images/quiz/corporate.jpg')">
+                <img class="media-fill" src="occasion-corporate.jpg" alt="Corporate gift" loading="lazy" onerror="handleMediaError(this,'Corporate','occasion-corporate.jpg')">
               </span>
               <span class="option-label"><i class="fa-solid fa-briefcase"></i> Corporate</span>
             </button>
@@ -689,7 +689,7 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.82);padding:80px 5vw 3
             <!-- Proposal -->
             <button class="quiz-option has-img" type="button">
               <span class="thumb-wrap">
-                <img class="media-fill" src="images/quiz/proposal.jpg" alt="Proposal gift" loading="lazy" onerror="handleMediaError(this,'Proposal','images/quiz/proposal.jpg')">
+                <img class="media-fill" src="occasion-proposal.jpg" alt="Proposal gift" loading="lazy" onerror="handleMediaError(this,'Proposal','occasion-proposal.jpg')">
               </span>
               <span class="option-label"><i class="fa-solid fa-ring"></i> Proposal</span>
             </button>
@@ -1032,14 +1032,14 @@ footer{background:var(--charcoal);color:rgba(255,255,255,.82);padding:80px 5vw 3
 <script>
 /* ============ DATA ============ */
 const occasions = [
-  {name:'Birthday', file:'birthday.jpg', tag:'Celebrate another year'},
-  {name:'Anniversary', file:'anniversary.jpg', tag:'Cherish the years together'},
-  {name:'Wedding', file:'wedding.jpg', tag:'Begin forever in style'},
-  {name:'Baby Shower', file:'baby-shower.jpg', tag:'Welcome the little one'},
-  {name:'Festival', file:'festival.jpg', tag:"Share the season's joy"},
-  {name:'Proposal', file:'proposal.jpg', tag:'Make the moment unforgettable'},
-  {name:'Corporate', file:'corporate.jpg', tag:'Impress with intention'},
-  {name:'Luxury Bouquets', file:'bouquet.jpg', tag:'Blooms, elevated'},
+  {name:'Birthday', file:'occasion-birthday.jpg', tag:'Celebrate another year'},
+  {name:'Anniversary', file:'occasion-anniversary.jpg', tag:'Cherish the years together'},
+  {name:'Wedding', file:'occasion-wedding.jpg', tag:'Begin forever in style'},
+  {name:'Baby Shower', file:'occasion-baby-shower.jpg', tag:'Welcome the little one'},
+  {name:'Festival', file:'occasion-festival.jpg', tag:"Share the season's joy"},
+  {name:'Proposal', file:'occasion-proposal.jpg', tag:'Make the moment unforgettable'},
+  {name:'Corporate', file:'occasion-corporate.jpg', tag:'Impress with intention'},
+  {name:'Luxury Bouquets', file:'occasion-bouquet.jpg', tag:'Blooms, elevated'},
 ];
 
 const products = [
@@ -1057,7 +1057,7 @@ const products = [
   {id:12,name:'Rustic Bloom Basket',price:1799,old:1999,rating:4.8,img:'product-12.jpg',desc:'Wildflowers in a handwoven basket.',budget:2000,badge:null},
 ];
 
-const galleryFiles = ['gallery-01.jpg','gallery-02.jpg','gallery-03.jpg','showcase-01.mp4','showcase-02.mp4','crafting-process.mp4','packing-process.mp4','customer-reaction.mp4','gallery-04.jpg','gallery-05.jpg'];
+const galleryFiles = ['gallery-01.jpg','gallery-02.jpg','gallery-03.jpg','gallery-video-01.mp4','gallery-video-02.mp4','gallery-video-03.mp4','gallery-video-04.mp4','gallery-video-05.mp4','gallery-04.jpg','gallery-05.jpg'];
 
 const testimonials = [
   {name:'Ananya R.',city:'Pune',text:'The hamper arrived exactly on time and looked even more beautiful than the photos. The handwritten card made my mother cry — happy tears.'},
@@ -1074,8 +1074,8 @@ const faqs = [
 ];
 
 /* ============ MEDIA HELPERS ============ */
-// Drop real files into images/... and videos/... using these exact names/paths
-// and they will replace the placeholders automatically — no code changes needed.
+// Drop real files into the SAME folder as this HTML file using these exact
+// filenames and they will replace the placeholders automatically — no code changes needed.
 
 function ph(icon,label,file){
   return `<div class="placeholder"><i class="fa-solid ${icon}"></i><span class="ph-label">${label}</span><span class="ph-name">${file}</span></div>`;
@@ -1112,7 +1112,7 @@ function handleMediaError(el,label,path){
 /* ============ RENDER ============ */
 const occasionGrid = document.getElementById('occasionGrid');
 occasions.forEach(o=>{
-  occasionGrid.innerHTML += `<div class="occasion-card">${media('images/occasions/'+o.file,o.name,o.name+' hamper')}<div class="occasion-overlay"><span>Shop Now</span><h4>${o.name} Hampers</h4></div></div>`;
+  occasionGrid.innerHTML += `<div class="occasion-card">${media(o.file,o.name,o.name+' hamper')}<div class="occasion-overlay"><span>Shop Now</span><h4>${o.name} Hampers</h4></div></div>`;
 });
 
 let cart = [];
@@ -1128,7 +1128,7 @@ function renderProducts(filter='all'){
     grid.innerHTML += `
     <div class="product-card">
       <div class="product-media">
-        ${media('images/products/'+p.img,p.name,p.name)}
+        ${media(p.img,p.name,p.name)}
         ${p.badge?`<span class="product-badge">${p.badge}</span>`:''}
         <button class="wish-btn ${isWish?'active':''}" onclick="toggleWishlist(${p.id})"><i class="fa-solid fa-heart"></i></button>
       </div>
@@ -1158,12 +1158,12 @@ document.querySelectorAll('.budget-tab').forEach(tab=>{
 const galleryGrid = document.getElementById('galleryGrid');
 galleryFiles.forEach(f=>{
   const isVideo = f.endsWith('.mp4');
-  const path = (isVideo?'videos/gallery/':'images/gallery/')+f;
+  const path = f;
   galleryGrid.innerHTML += `<div class="gallery-item">${mediaAuto(path,isVideo?'Video':'Photo',isVideo?'Vellora behind-the-scenes video':'Vellora hamper photo')}${isVideo?'<div class="play-ic"><i class="fa-solid fa-play"></i></div>':''}</div>`;
 });
 
 const instaGrid = document.getElementById('instaGrid');
-for(let i=0;i<12;i++){instaGrid.innerHTML += `<div class="insta-item">${media('images/instagram/insta-'+(i+1)+'.jpg','Instagram post','Vellora Instagram post '+(i+1))}</div>`;}
+for(let i=0;i<12;i++){instaGrid.innerHTML += `<div class="insta-item">${media('insta-'+(i+1)+'.jpg','Instagram post','Vellora Instagram post '+(i+1))}</div>`;}
 
 const testiTrack = document.getElementById('testiTrack');
 testimonials.forEach(t=>{
@@ -1190,7 +1190,7 @@ function toggleFaq(i){
   img.className = 'media-fill';
   img.alt = 'Vellora hamper — hero banner';
   img.loading = 'eager';
-  img.src = 'images/hero/hero-banner.jpg';
+  img.src = 'hero-banner.jpg';
   img.onerror = function(){ img.remove(); }; // keep existing placeholder if file isn't there yet
   img.onload = function(){ placeholder.remove(); };
   heroVisual.insertBefore(img, placeholder);
@@ -1223,7 +1223,7 @@ function renderCart(){
   let total=0;
   body.innerHTML = cart.map((id,idx)=>{
     const p = products.find(x=>x.id===id); total+=p.price;
-    return `<div class="drawer-row"><div class="thumb">${media('images/products/'+p.img,p.name,p.name)}</div><div class="info"><strong>${p.name}</strong><span>₹${p.price.toLocaleString('en-IN')}</span></div><button class="rm" onclick="removeFromCart(${idx})"><i class="fa-solid fa-trash"></i></button></div>`;
+    return `<div class="drawer-row"><div class="thumb">${media(p.img,p.name,p.name)}</div><div class="info"><strong>${p.name}</strong><span>₹${p.price.toLocaleString('en-IN')}</span></div><button class="rm" onclick="removeFromCart(${idx})"><i class="fa-solid fa-trash"></i></button></div>`;
   }).join('');
   document.getElementById('cartTotal').textContent = '₹'+total.toLocaleString('en-IN');
 }
@@ -1233,7 +1233,7 @@ function renderWishlist(){
   if(wishlist.length===0){body.innerHTML='<div class="drawer-empty"><i class="fa-solid fa-heart"></i><p>Your wishlist is empty</p></div>';return;}
   body.innerHTML = wishlist.map(id=>{
     const p = products.find(x=>x.id===id);
-    return `<div class="drawer-row"><div class="thumb">${media('images/products/'+p.img,p.name,p.name)}</div><div class="info"><strong>${p.name}</strong><span>₹${p.price.toLocaleString('en-IN')}</span></div><button class="rm" onclick="toggleWishlist(${p.id})"><i class="fa-solid fa-trash"></i></button></div>`;
+    return `<div class="drawer-row"><div class="thumb">${media(p.img,p.name,p.name)}</div><div class="info"><strong>${p.name}</strong><span>₹${p.price.toLocaleString('en-IN')}</span></div><button class="rm" onclick="toggleWishlist(${p.id})"><i class="fa-solid fa-trash"></i></button></div>`;
   }).join('');
 }
 function openDrawer(type){
